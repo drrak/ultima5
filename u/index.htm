@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="Description" content="Ultima IV Underworld Map"/>
+<meta name="Author" content="3dh"/>
+<title>Ultima V Underworld</title>
+<style>
+p,a:link,a:visited{color:#fff;padding:0 0 0 20px;background:url(p0.png) top left no-repeat;text-decoration:none;text-shadow:2px 1px 0 #000,1px 2px 0 #000;position:absolute;white-space:nowrap;}
+div:first-child p:hover,div:first-child a:hover{color:#e0e0e0;background-image:url(p1.png);text-decoration:none;text-shadow:2px 1px 0 #000,1px 2px 0 #000;}
+html,body{background:#f5f5f5 url(u5m4096.png) no-repeat;font:12px "Arial Black", Gadget, sans-serif;position:absolute;margin:0 auto;padding:0;width:4096px;height:4096px;}
+img{border:none;}
+a.le{padding:0 20px 0 0;background:url(p0.png) center right no-repeat;}
+a.bt,p.bt{padding:0 0 18px 0;background:url(p0.png) center bottom no-repeat;}
+a.tp{padding:15px 0 0 0;background:url(p0.png) center top no-repeat;}
+#cr,#lang,#lang a{display:block;position:fixed;bottom:0;font:12px Arial, Helvetica, sans-serif;background:#382515;}
+#cr{float:right;right:0;padding:0 10px;}#lang,#lang a{float:left;left:0;padding:0 5px;}#a{color:#ffba00;text-decoration:underline;}
+</style>
+<!--[if gte IE 5]>
+<style type="text/css">p,a:link,a:visited{filter:progid:DXImageTransform.Microsoft.Shadow(color='black',Direction=135,Strength=2);}</style>
+<![endif]-->
+</head>
+<body>
+<div>
+<a href="http://wiki.ultimacodex.com/wiki/Dungeon_Solution_for_Ultima_V#Deceit" title="Deceit (EJ PA)
+Word of Power: FALLAX" style="left:3840px;top:1168px;">Deceit</a>
+<a href="http://wiki.ultimacodex.com/wiki/Dungeon_Solution_for_Ultima_V#Despise" title="Despise (ED FL)
+Word of Power: INOPIA" style="left:1456px;top:1072px;">Despise</a>
+<a href="http://wiki.ultimacodex.com/wiki/Dungeon_Solution_for_Ultima_V#Destard" title="Destard (KI EI)
+Word of Power: VILIS" style="left:1152px;top:2688px;">Destard</a>
+<a href="http://wiki.ultimacodex.com/wiki/Dungeon_Solution_for_Ultima_V#Wrong" title="Wrong (BE HO)
+Word of Power: INFAMA" style="left:2016px;top:320px;">Wrong</a>
+<a href="http://wiki.ultimacodex.com/wiki/Dungeon_Solution_for_Ultima_V#Covetous" title="Covetous (BL JM)
+Word of Power: AVIDUS" style="left:2496px;top:432px;">Covetous</a>
+<a href="http://wiki.ultimacodex.com/wiki/Dungeon_Solution_for_Ultima_V#Shame" title="Shame (GG DK)
+Word of Power: MALUM" style="left:928px;top:1632px;">Shame</a>
+<a href="http://wiki.ultimacodex.com/wiki/Dungeon_Solution_for_Ultima_V#Hythloth" title="Hythloth (PA OP)
+Word of Power: IGNAVUS" style="left:3824px;top:3840px;">Hythloth</a>
+
+<a href="http://wiki.ultimacodex.com/wiki/Spiritwood" title="Waterfall to Underworld (IJ DG)" style="left:864px;top:2191px">Waterfall</a>
+
+<a id="cr" href="https://github.com/drrak/ultima5"><span id="y"></span> <span id="x"></span> &copy; 2018 3dh</a>
+
+<script>
+var box = document.querySelector('body');
+var pageX = document.getElementById('x');
+var pageY = document.getElementById('y');
+
+function updateDisplay(event) {
+  yy = Math.round((event.pageY-8)/16).toString(16);
+  xx = Math.round((event.pageX-8)/16).toString(16);
+  
+  //var mapObj = {'0':'A','1':'B','2':'C','3':'D','4':'E','5':'F','6':'G','7':'H','8':'I','9':'J','a':'K','b':'L','c':'M','d':'N','e':'O','f':'P'};
+  //pageY.innerText = yy.replace(/[0123456789abcdef]/g, m => mapObj[m]);
+  //pageX.innerText = xx.replace(/[0123456789abcdef]/g, m => mapObj[m]);
+  pageY.innerText = yy.replace(/0/g,'A').replace(/1/g,'B').replace(/2/g,'C').replace(/3/g,'D').replace(/4/g,'E').replace(/5/g,'F').replace(/6/g,'G').replace(/7/g,'H').replace(/8/g,'I').replace(/9/g,'J').replace(/a/g,'K').replace(/b/g,'L').replace(/c/g,'M').replace(/d/g,'N').replace(/e/g,'O').replace(/f/g,'P');
+  pageX.innerText = xx.replace(/0/g,'A').replace(/1/g,'B').replace(/2/g,'C').replace(/3/g,'D').replace(/4/g,'E').replace(/5/g,'F').replace(/6/g,'G').replace(/7/g,'H').replace(/8/g,'I').replace(/9/g,'J').replace(/a/g,'K').replace(/b/g,'L').replace(/c/g,'M').replace(/d/g,'N').replace(/e/g,'O').replace(/f/g,'P');
+  
+  if ((event.pageX)<256){pageX.innerText = 'A' + pageX.innerText;}
+  if ((event.pageY)<256){pageY.innerText = 'A' + pageY.innerText;}
+  if ((event.pageX)>4091){pageX.innerText = 'PP';}
+  if ((event.pageY)>4091){pageY.innerText = 'PP';}
+
+}
+
+box.addEventListener('mousemove', updateDisplay, false);
+box.addEventListener('mouseenter', updateDisplay, false);
+box.addEventListener('mouseleave', updateDisplay, false);
+</script>
+</div>
+</body>
+</html>
