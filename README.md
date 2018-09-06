@@ -1,4 +1,4 @@
-# Ultima V Map v0.90
+# Ultima V Map v0.92
 
 Ultima 5 (4096x4096px): https://drrak.github.io/ultima5/
 
