@@ -1,4 +1,4 @@
-# Ultima V Map v0.94
+# Ultima V Map v0.95
 [Ultima 5 Map (4096x4096px)](https://drrak.github.io/ultima5/)
 
 [Ultima 5 Underworld Map (4096x4096px)](https://drrak.github.io/ultima5/u/)
